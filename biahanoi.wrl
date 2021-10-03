@@ -1,0 +1,217 @@
+#VRML V2.0 utf8
+
+#VRML V2.0 utf8
+
+Transform {
+	scale 0.2 0.2 0.2
+	children [# thân trai
+Shape {
+	   
+	geometry	Extrusion {
+		 
+	    crossSection [
+		1.00	0.00
+		0.98	0.20
+		0.92	0.38
+		0.83	0.56
+		0.71	0.71
+		0.56	0.83
+		0.38	0.92
+		0.20	0.98
+		0.00	1.00
+		-0.20	0.98
+		-0.38	0.92
+		-0.56	0.83
+		-0.71	0.71
+		-0.83	0.56
+		-0.92	0.38
+		-0.98	0.20
+		-1.00	0.00
+		-0.98	-0.20
+		-0.92	-0.38
+		-0.83	-0.56
+		-0.71	-0.71
+		-0.56	-0.83
+		-0.38	-0.92
+		-0.20	-0.98
+		0.00	-1.00
+		0.20	-0.98
+		0.38	-0.92
+		0.56	-0.83
+		0.71	-0.71
+		0.83	-0.56
+		0.92	-0.38
+		0.98	-0.20
+		1		 0
+		]
+		spine [
+		   0 0 0 , 0 0.2 0	, 0 1.1 0,  0 1.3 0,  0 1.6 0,  0 1.8 0,  0 2.2 0,  0 3.2 0
+		]
+		scale [  0.5 0.5 , 0.5 0.5 ,0.5 0.5,0.5 0.5,0.5 0.5 , 0.5 0.5,  0.3 0.3,0.2 0.2]
+		solid FALSE
+		beginCap TRUE
+		endCap FALSE
+
+	}
+	appearance Appearance {
+		material Material {
+			diffuseColor .29 .29 0
+			specularColor 1 1 .39
+			emissiveColor .32 .32 0
+			ambientIntensity 0
+			shininess .15
+			transparency .51
+		}
+	}
+	
+
+
+	
+	
+	
+	
+}
+# thân trai có logo
+
+Transform {
+	translation	0 -1.5 0
+	children	[
+	            Shape {
+    
+	geometry	Extrusion {
+		 
+	    crossSection [
+		1.00	0.00
+		0.98	0.20
+		0.92	0.38
+		0.83	0.56
+		0.71	0.71
+		0.56	0.83
+		0.38	0.92
+		0.20	0.98
+		0.00	1.00
+		-0.20	0.98
+		-0.38	0.92
+		-0.56	0.83
+		-0.71	0.71
+		-0.83	0.56
+		-0.92	0.38
+		-0.98	0.20
+		-1.00	0.00
+		-0.98	-0.20
+		-0.92	-0.38
+		-0.83	-0.56
+		-0.71	-0.71
+		-0.56	-0.83
+		-0.38	-0.92
+		-0.20	-0.98
+		0.00	-1.00
+		0.20	-0.98
+		0.38	-0.92
+		0.56	-0.83
+		0.71	-0.71
+		0.83	-0.56
+		0.92	-0.38
+		0.98	-0.20
+		1		 0
+		]
+		spine [
+		   0 2 0,  0 2.8 0
+		]
+		scale [  0.51 0.51, 0.51 0.51]
+		solid FALSE
+		beginCap FALSE
+		endCap FALSE
+
+	}
+	appearance Appearance {
+	    
+		texture ImageTexture {
+
+		url "logobia.jpg"
+
+		repeatS TRUE
+
+		repeatT TRUE
+
+		}
+
+
+	}
+
+	
+}
+	]
+}
+#nắp chai
+DEF	napxoay Transform {
+	translation	 0 3.1 0
+	children [
+	    				 DEF napchai Shape {
+	 
+					geometry	Extrusion {		 
+	    				crossSection [
+						1.00	0.00
+						0.98	0.20
+						0.92	0.38
+						0.83	0.56
+						0.71	0.71
+						0.56	0.83
+						0.38	0.92
+						0.20	0.98
+						0.00	1.00
+						-0.20	0.98
+						-0.38	0.92
+						-0.56	0.83
+						-0.71	0.71
+						-0.83	0.56
+						-0.92	0.38
+						-0.98	0.20
+						-1.00	0.00
+						-0.98	-0.20
+						-0.92	-0.38
+						-0.83	-0.56
+						-0.71	-0.71
+						-0.56	-0.83
+						-0.38	-0.92
+						-0.20	-0.98
+						0.00	-1.00
+						0.20	-0.98
+						0.38	-0.92
+						0.56	-0.83
+						0.71	-0.71
+						0.83	-0.56
+						0.92	-0.38
+						0.98	-0.20
+						1		 0
+						]
+						spine [
+		    				 0 0 0,  0 0.1 0
+						]
+						scale  [0.22 0.22,0.22 0.22]
+						solid FALSE
+						beginCap FALSE
+						endCap TRUE
+
+					}
+					appearance Appearance {
+						material Material {
+							diffuseColor .655 .388 .0235
+							specularColor .76 .74 .59
+							ambientIntensity .0567
+							shininess .07
+						}
+					}
+				
+
+    
+	
+    
+				}
+			
+					  
+	]
+
+}]
+}
+

@@ -1,0 +1,122 @@
+#VRML V2.0 utf8
+Transform {
+	rotation 1 0 0 1.57
+	children	[
+	    DEF Banhxe Transform {
+	scale 0.5 0.5 0.5
+	children [# bánh xe
+			Shape {
+			    
+				geometry	Extrusion {
+		 
+	    			crossSection [
+					1.00	0.00
+					0.98	0.20
+					0.92	0.38
+					0.83	0.56
+					0.71	0.71
+					0.56	0.83
+					0.38	0.92
+					0.20	0.98
+					0.00	1.00
+					-0.20	0.98
+					-0.38	0.92
+					-0.56	0.83
+					-0.71	0.71
+					-0.83	0.56
+					-0.92	0.38
+					-0.98	0.20
+					-1.00	0.00
+					-0.98	-0.20
+					-0.92	-0.38
+					-0.83	-0.56
+					-0.71	-0.71
+					-0.56	-0.83
+					-0.38	-0.92
+					-0.20	-0.98
+					0.00	-1.00
+					0.20	-0.98
+					0.38	-0.92
+					0.56	-0.83
+					0.71	-0.71
+					0.83	-0.56
+					0.92	-0.38
+					0.98	-0.20
+					1		 0
+					]
+					spine [
+					   0 0 0 , 0 0.2 0	, 0 0.7 0,  0 0.9 0
+					]
+					scale [  0.7 0.7 , 0.9 0.9 ,0.9 0.9, 0.7 0.7]
+					solid FALSE
+					beginCap TRUE
+					endCap TRUE
+
+				}
+				appearance Appearance {
+					material Material {
+						diffuseColor .45 .45 .45
+						specularColor .5 .5 .5
+						emissiveColor .15 .15 .15
+						ambientIntensity 0
+					}
+				}
+	
+	
+	
+			}	
+	       	Transform {
+				children	[
+				   DEF matbanhxe  Shape {
+							geometry	Cylinder {
+				    
+
+											height 0.001
+
+											radius 0.7
+
+											bottom TRUE
+
+											top TRUE
+
+											side TRUE
+
+ 
+							}
+							appearance Appearance {
+				    				texture ImageTexture {
+
+									url "banhxe.jpg"
+
+									repeatS TRUE
+
+									repeatT TRUE
+
+		        			 }
+							}
+
+						}
+				]
+			}
+				Transform {
+			    		translation	0  0.9 0 
+						children	[
+							USE	matbanhxe
+						]
+					}
+					]
+}
+	 
+	]
+}
+DEF	T1 TimeSensor {
+   cycleInterval 3
+   enabled TRUE
+   loop	TRUE
+}
+DEF	Oxoay OrientationInterpolator {
+	key [0 0.5 1]
+	keyValue [0 1 0 0,0  1 0 3.14 , 0  1 0 6.28]
+}
+ROUTE T1.fraction_changed  TO Oxoay.set_fraction
+ROUTE Oxoay.value_changed TO Banhxe.rotation

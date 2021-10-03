@@ -1,0 +1,186 @@
+#VRML V2.0 utf8
+
+Transform {
+	translation 0 0.3	0.051
+	children [
+		Shape {
+			
+			geometry Text{
+
+			string ["NOỌNG ƠI" "Trà chanh & coffe"]
+
+			fontStyle FontStyle{
+
+            			size 1
+
+            			family "ARIAL"
+
+            			style "BOLD"
+
+            			spacing 0.8
+
+            			 justify "MIDDLE"
+
+            			 horizontal TRUE
+
+            			 leftToRight TRUE
+
+            			 topToBottom TRUE
+
+            			 }
+
+			length [2 3]
+
+			maxExtent 4.0
+
+			}
+			
+
+		}
+	]
+}
+#VRML V2.0 utf8
+
+Transform {
+	translation -2 -0.9	0.051
+	children [
+		Shape {
+			
+			geometry Text{
+
+			string ["Địa chỉ: 39A, Trung yên 3, Cầu giấy, Hà nội"]
+
+			fontStyle FontStyle{
+
+            			size 0.3
+
+            			family "ARIAL"
+
+            			style "BOLD"
+
+            			spacing 1
+
+            			 justify "MIDDLE"
+
+            			 horizontal TRUE
+
+            			 leftToRight TRUE
+
+            			 topToBottom TRUE
+
+            			 }
+
+			length [4]
+
+			maxExtent 2.0
+
+			}
+			
+
+		}
+	]
+}
+Transform {
+	translation 1.9 -0.9	0.051
+	children [
+		Shape {
+			
+			geometry Text{
+
+			string ["Hotline: 036.686.3326"]
+
+			fontStyle FontStyle{
+
+            			size 0.3
+
+            			family "ARIAL"
+
+            			style "BOLD"
+
+            			spacing 1
+
+            			 justify "MIDDLE"
+
+            			 horizontal TRUE
+
+            			 leftToRight TRUE
+
+            			 topToBottom TRUE
+
+            			 }
+
+			length [3]
+
+			maxExtent 2.0
+
+			}
+			
+
+		}
+	]
+}
+Transform {
+	translation	0 0 0
+	children [
+		Shape {
+			 appearance DEF maugo Appearance {
+
+            material Material {}
+
+            texture ImageTexture {
+
+				url "gobienhieu.jpg"
+
+				repeatS TRUE
+
+				repeatT TRUE
+
+				}
+
+				  }
+
+			geometry Box {size 6 2 0.1}
+		}
+	]
+}
+Transform {
+	translation	-4 0 0
+	children [
+		Shape {
+			 appearance	USE	maugo
+
+			geometry Box {size 2 2 0.1}
+		}
+		
+	]
+
+}
+Transform {
+	translation	-4 0 0
+	rotation  1 0 0 1.57
+	children [
+		Shape {
+			appearance DEF logo Appearance {
+
+            material Material {}
+
+            texture ImageTexture {
+
+				url "logo.jpg"
+
+				repeatS TRUE
+
+				repeatT TRUE
+
+				}
+
+				  }
+			geometry Cylinder {
+				height 0.2
+				radius 0.8
+			}
+		}
+	]
+
+}
+

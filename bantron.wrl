@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+#mặt bàn
+DEF	matbantron Shape {
+
+	geometry Extrusion {
+		crossSection	[
+		    1.00	0.00
+			0.98	0.20
+			0.92	0.38
+			0.83	0.56
+			0.71	0.71
+			0.56	0.83
+			0.38	0.92
+			0.20	0.98
+			0.00	1.00
+			-0.20	0.98
+			-0.38	0.92
+			-0.56	0.83
+			-0.71	0.71
+			-0.83	0.56
+			-0.92	0.38
+			-0.98	0.20
+			-1.00	0.00
+			-0.98	-0.20
+			-0.92	-0.38
+			-0.83	-0.56
+			-0.71	-0.71
+			-0.56	-0.83
+			-0.38	-0.92
+			-0.20	-0.98
+			0.00	-1.00
+			0.20	-0.98
+			0.38	-0.92
+			0.56	-0.83
+			0.71	-0.71
+			0.83	-0.56
+			0.92	-0.38
+			0.98	-0.20
+			1		 0
+		
+		]
+		spine [ 0 0 0 , 0 0.1 0]
+		scale [ 0.95 0.95 ,1.01 1.01]
+		beginCap TRUE
+		endCap	FALSE
+		solid FALSE
+					 
+	}
+	appearance Appearance {
+		material Material {
+			diffuseColor 1 1 .341
+			specularColor .27 .13 .13
+			ambientIntensity .0933
+			shininess .31
+		}
+	}
+	
+	
+}
+# chân bàn
+Transform {
+	translation	  1.03 -0.92 0 
+    children [
+	    DEF chanban Shape {
+		   geometry Cylinder{
+
+			height 2.0
+
+			radius 0.05
+
+			bottom TRUE
+
+			top TRUE
+
+			side TRUE
+
+			}
+
+		    appearance Appearance {
+				material Material {
+					diffuseColor 1 1 .341
+					specularColor .27 .13 .13
+					ambientIntensity .0933
+					shininess .31
+				}
+			}
+		}
+	]
+}
+Transform {
+	translation	  -1.03 -0.92 0 
+    children [
+	   
+	   USE chanban
+	]
+}
+Transform {
+	translation	  0 -0.92 -1.03 
+    children [
+	   
+	   USE chanban
+	]
+}
+Transform {
+	translation	  0 -0.92 1.03 
+    children [
+	   
+	   USE chanban
+	]
+}
